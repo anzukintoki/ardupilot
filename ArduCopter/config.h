@@ -290,6 +290,12 @@
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
+// Spiral - fly vehicle around a central point
+#ifndef MODE_SPIRAL_ENABLED
+# define MODE_SPIRAL_ENABLED ENABLED
+#endif
+
+//////////////////////////////////////////////////////////////////////////////
 // Drift - fly vehicle in altitude-held, coordinated-turn mode
 #ifndef MODE_DRIFT_ENABLED
 # define MODE_DRIFT_ENABLED ENABLED

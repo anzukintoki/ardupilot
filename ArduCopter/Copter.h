@@ -463,6 +463,9 @@ private:
 #if MODE_CIRCLE_ENABLED == ENABLED
     AC_Circle *circle_nav;
 #endif
+#if MODE_SPIRAL_ENABLED == ENABLED
+    AC_Spiral *spiral_nav;
+#endif
 
     // System Timers
     // --------------
@@ -919,6 +922,9 @@ private:
 #endif
 #if MODE_CIRCLE_ENABLED == ENABLED
     ModeCircle mode_circle;
+#endif
+#if MODE_SPIRAL_ENABLED == ENABLED
+    ModeSpiral mode_spiral;
 #endif
 #if MODE_DRIFT_ENABLED == ENABLED
     ModeDrift mode_drift;

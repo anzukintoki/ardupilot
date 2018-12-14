@@ -596,6 +596,14 @@ void Copter::allocate_motors(void)
     AP_Param::load_object_from_eeprom(circle_nav, circle_nav->var_info);
 #endif
 
+#if MODE_SPIRAL_ENABLED == ENABLED
+    spiral_nav = new AC_Spiral(inertial_nav, *ahrs_view, *pos_control);
+    if (spiral_nav == nullptr) {
+        AP_HAL::panic("Unable to allocate SpiralNav");
+    }
+    AP_Param::load_object_from_eeprom(spiral_nav, spiral_nav->var_info);
+#endif
+
     // reload lines from the defaults file that may now be accessible
     AP_Param::reload_defaults_file(true);
     
